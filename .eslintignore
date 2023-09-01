@@ -8,3 +8,4 @@ src/assets/tailwind.css
 src/assets
 tailwind.config.js
 app.tsx
+lib
