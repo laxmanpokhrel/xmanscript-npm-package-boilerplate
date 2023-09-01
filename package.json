@@ -10,7 +10,7 @@
     "url": "https://github.com/"
   },
   "homepage": "https://github.com/",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "tsc",
     "prepare": "husky install"
