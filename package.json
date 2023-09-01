@@ -1,18 +1,18 @@
 {
-  "name": "npm-package-bolierplate",
-  "version": "1.0.0",
+  "name": "npm-package-here",
+  "version": "1.0.2",
   "description": "Boilerplate for starting to develop a npm package in Typescript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/**"
+    "url": "https://github.com/"
   },
   "bugs": {
-    "url": "https://github.com/**/issues"
+    "url": "https://github.com/"
   },
-  "homepage": "https://github.com/**",
-  "main": "index.js",
+  "homepage": "https://github.com/",
+  "main": "./lib/index.js",
   "scripts": {
-    "build": "rm ./lib/* && tsc",
+    "build": "tsc",
     "prepare": "husky install"
   },
   "author": "Laxman Pokhrel",
