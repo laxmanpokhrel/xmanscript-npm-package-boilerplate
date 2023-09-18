@@ -48,32 +48,16 @@ To initialize Commitizen with this template, run the following command:
 ```bash
 npx commitizen init cz-conventional-changelog --yarn --dev --exact --force
 ```
+- **Github Actions branch change:** You have to modify the 
+banch name to the branch name in which you want the release job to start.
 
-## Development Workflow
-
-Once you have initialized Husky and Commitizen, you can start developing your package. Here are some key commands and tools available in this template:
-
-- **Linting and Code Formatting**: This template uses ESLint and Prettier for linting and code formatting. You can run linting checks using:
-
-  ```bash
-  yarn lint
-  ```
-
-- **Testing**: Jest is set up for testing. You can run your tests using:
-
-  ```bash
-  yarn test
-  ```
-
-- **Automatic Type Checking**: TypeScript is used for type checking. You can run type checking using:
-
-  ```bash
-  yarn type-check
-  ```
-
-- **Automatic Release**: Semantic-release is configured to automatically manage versioning and package releases. When you make commits following the conventional commit message format, semantic-release will determine the version number and publish your package to npm automatically.
-
-- **Development Server**: If you are developing a web-based project, you can use Nodemon to automatically restart your development server on code changes. Customize the Nodemon configuration in `nodemon.json`.
+```
+name: Release
+on:
+  push:
+    branches:
+      - <<release brnach name>>
+```
 
 - **Custom TypeScript Configuration**: You can modify the TypeScript configuration in `tsconfig.json` to suit your project's needs.
 
@@ -96,6 +80,6 @@ This project is licensed under the MIT License.
 
 ## Support
 
-meIf you have any questions or need assistance, please feel free to reach out through the GitHub Issues section of this repository.
+If you have any questions or need assistance, please feel free to reach out through the GitHub Issues section of this repository.
 
 Happy coding! 🚀
