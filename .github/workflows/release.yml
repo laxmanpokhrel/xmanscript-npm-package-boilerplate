@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - release
+      - release # branch in which you want the publish to happen
 
 permissions:
   contents: read # for checkout
@@ -27,10 +27,12 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: npm install
+      - name: Build project
+        run: npm run build
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} #add this secret in repositary secret. You can get the secret from NPM
         run: npx semantic-release
