@@ -56,7 +56,7 @@ name: Release
 on:
   push:
     branches:
-      - <<release brnach name>>
+      - <<release branch name>>
 ```
 
 - **Custom TypeScript Configuration**: You can modify the TypeScript configuration in `tsconfig.json` to suit your project's needs.
